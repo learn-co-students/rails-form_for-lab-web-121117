@@ -38,3 +38,204 @@ Started GET "/" for ::1 at 2015-11-18 13:37:10 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (2)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "2"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:22:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#index as HTML
+  Rendered school_classes/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:1: syntax error, unexpected keyword_class, expecting '|'
+... @school_classes.each do |class| @output_buffer.safe_append='
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+...;@output_buffer.append=( class.title );@output_buffer.safe_a...
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+...;@output_buffer.append=( class.room_number );@output_buffer....
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/school_classes/index.html.erb:1: syntax error, unexpected keyword_class, expecting '|'
+  app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+  app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+  app/views/school_classes/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.1ms)
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:22:53 -0500
+Processing by SchoolClassesController#index as HTML
+  Rendered school_classes/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:1: syntax error, unexpected keyword_class, expecting '|'
+... @school_classes.each do |class| @output_buffer.safe_append='
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+...;@output_buffer.append=( class.title );@output_buffer.safe_a...
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+...;@output_buffer.append=( class.room_number );@output_buffer....
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/school_classes/index.html.erb:1: syntax error, unexpected keyword_class, expecting '|'
+  app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+  app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+  app/views/school_classes/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.1ms)
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:24:14 -0500
+Processing by SchoolClassesController#index as HTML
+  Rendered school_classes/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:1: syntax error, unexpected keyword_class, expecting '|'
+... @school_classes.each do |class| @output_buffer.safe_append='
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+...;@output_buffer.append=( class.title );@output_buffer.safe_a...
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+...;@output_buffer.append=( class.room_number );@output_buffer....
+...                               ^
+/Users/davidwelch/Development/rails-form_for-lab-web-121117/app/views/school_classes/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/school_classes/index.html.erb:1: syntax error, unexpected keyword_class, expecting '|'
+  app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+  app/views/school_classes/index.html.erb:2: syntax error, unexpected '.'
+  app/views/school_classes/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidwelch/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.1ms)
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:29:14 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.6ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 372ms (Views: 371.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2018-01-15 13:34:16 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 93ms (Views: 87.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/school_classes" for ::1 at 2018-01-15 13:34:23 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YnnmB4oSgtxmL0FD/qi4/CNSFuNzOPGJICvoV4ivgdpNuX7yYlPNZ0x81xZ55hAQF2ICYKJZ4M8E3Ph2t+ajaw==", "school_class"=>{"title"=>"First Class", "room_number"=>"123"}, "commit"=>"Create School class"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (42.9ms)[0m  INSERT INTO "school_classes" DEFAULT VALUES
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 48ms (ActiveRecord: 44.5ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2018-01-15 13:34:23 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered school_classes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:34:39 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2018-01-15 13:36:13 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/school_classes" for ::1 at 2018-01-15 13:36:21 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t4kT11+9U5Exu4D6zsKEUENss4aYuom5VCQDag/FH1WYSYsit/wcKhvoFq9JjCy8d1ynBUnbmP9w0xNLMIw95A==", "school_class"=>{"title"=>"Fart 101", "room_number"=>"12"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "school_classes" DEFAULT VALUES[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/school_classes/2
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2018-01-15 13:36:21 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:37:19 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.1ms)
+  [1m[36mSchoolClass Load (1.4ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number") VALUES (?, ?)[0m  [["title", "This Class"], ["room_number", 45]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:38:52 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes" for ::1 at 2018-01-15 13:41:49 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.6ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2018-01-15 13:41:52 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2018-01-15 13:42:00 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Thsl7yXX2oYJLYcLkGU5rR8ZeOk8I1uPlGfD8rmB7bO+PRiVNYQ0TJ3IEmpDzwKgExxYHWRnCgapo8u9a8lBw==", "school_class"=>{"title"=>"Frarrer", "room_number"=>"15"}, "commit"=>"Create School class"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "school_classes" DEFAULT VALUES
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/4
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2018-01-15 13:42:00 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered school_classes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.1ms)
