@@ -1,0 +1,5 @@
+<%= form_for @school_class do |form| %>
+  <%= form.text_field :title, placeholder: @school_class.title %><br><br>
+  <%= form.text_field :room_number,  placeholder: @school_class.room_number %><br>
+    <%= form.submit %>
+  <% end %>
