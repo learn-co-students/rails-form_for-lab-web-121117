@@ -1,0 +1,8 @@
+
+<h1><%= @student.to_s %></h1>
+
+<br><br>
+
+<%= form_tag("/students/#{@student.id}/edit", method: "get") do %>
+  <%= submit_tag("Edit") %>
+<% end %>
