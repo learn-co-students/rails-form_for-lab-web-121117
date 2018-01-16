@@ -1,0 +1,12 @@
+
+<h1><%= @school_class.title %></h1>
+
+<label>Room Number: </label>
+
+<%= @school_class.room_number %>
+
+<br><br>
+
+<%= form_tag("/school_classes/#{@school_class.id}/edit", method: "get") do %>
+  <%= submit_tag("Edit") %>
+<% end %>
