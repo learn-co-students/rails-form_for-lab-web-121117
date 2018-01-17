@@ -38,3 +38,1245 @@ Started GET "/" for ::1 at 2015-11-18 13:37:10 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (20180114211013)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180114211013"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts" for ::1 at 2018-01-17 00:16:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.9ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:18:23 -0500
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/tanelam/Development/Two/rails-form_for-lab-web-121117/app/views/students/index.html.erb:6: syntax error, unexpected keyword_end
+  '.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+                                      ^
+/Users/tanelam/Development/Two/rails-form_for-lab-web-121117/app/views/students/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/tanelam/Development/Two/rails-form_for-lab-web-121117/app/views/students/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/students/index.html.erb:6: syntax error, unexpected keyword_end
+  app/views/students/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/students/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.7ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:18:40 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined method `firts_name' for #<Student:0x007f9682375760>
+Did you mean?  first_name
+               first_name?
+               first_name=):
+    2: 
+    3: <ul>
+    4: <% @students.each do |student| %>
+    5:   <li><%= student.firts_name | student.last_name %></li>
+    6:   <% end %>
+    7: </ul>
+  app/views/students/index.html.erb:5:in `block in _app_views_students_index_html_erb___2411094529369137325_70142199917920'
+  app/views/students/index.html.erb:4:in `_app_views_students_index_html_erb___2411094529369137325_70142199917920'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.1ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:18:55 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `|' for "Jordan":String):
+    2: 
+    3: <ul>
+    4: <% @students.each do |student| %>
+    5:   <li><%= student.first_name | student.last_name %></li>
+    6:   <% end %>
+    7: </ul>
+  app/views/students/index.html.erb:5:in `block in _app_views_students_index_html_erb___2411094529369137325_70142204180240'
+  app/views/students/index.html.erb:4:in `_app_views_students_index_html_erb___2411094529369137325_70142204180240'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.7ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:19:12 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `|' for "Jordan":String):
+    2: 
+    3: <ul>
+    4: <% @students.each do |student| %>
+    5:   <%= student.first_name | student.last_name %>
+    6:   <% end %>
+    7: </ul>
+  app/views/students/index.html.erb:5:in `block in _app_views_students_index_html_erb___2411094529369137325_70142212244540'
+  app/views/students/index.html.erb:4:in `_app_views_students_index_html_erb___2411094529369137325_70142212244540'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.4ms)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "pup"], ["last_name", "poop"], ["created_at", "2018-01-17 05:23:20.166605"], ["updated_at", "2018-01-17 05:23:20.166605"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:24:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 480ms (Views: 465.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:24:36 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:25:47 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:26:17 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:26:30 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:26:48 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:26:51 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:26:54 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:26:55 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:27:04 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:27:08 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for ::1 at 2018-01-17 00:40:36 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 44ms (Views: 37.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:41:03 -0500
+
+ActionController::RoutingError (No route matches [POST] "/students"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.9ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:41:07 -0500
+
+ActionController::RoutingError (No route matches [POST] "/students"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.2ms)
+
+
+Started GET "/students/new" for ::1 at 2018-01-17 00:43:03 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:43:26 -0500
+
+ActionController::RoutingError (No route matches [POST] "/students"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.5ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:44:57 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nmXFzGSphJ6akuO7Wj97hJ5UBzhy7S4rs40AqeaqrkgqKhtvZ7390qb2yt0TW9Xiv/tUKD10yeYXcjANMGFcyA==", "student"=>{"first_name"=>"tania", "last_name"=>"aparico"}, "commit"=>"Create Student"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'firts_name' for Student.):
+  app/controllers/students_controller.rb:12:in `create'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.1ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:45:38 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nmXFzGSphJ6akuO7Wj97hJ5UBzhy7S4rs40AqeaqrkgqKhtvZ7390qb2yt0TW9Xiv/tUKD10yeYXcjANMGFcyA==", "student"=>{"first_name"=>"tania", "last_name"=>"aparico"}, "commit"=>"Create Student"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "tania"], ["last_name", "aparico"], ["created_at", "2018-01-17 05:45:38.822506"], ["updated_at", "2018-01-17 05:45:38.822506"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 9.4ms)
+
+NoMethodError (undefined method `student_path' for #<StudentsController:0x007f92a57aade8>
+Did you mean?  students_path):
+  app/controllers/students_controller.rb:13:in `create'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.5ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:45:59 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nmXFzGSphJ6akuO7Wj97hJ5UBzhy7S4rs40AqeaqrkgqKhtvZ7390qb2yt0TW9Xiv/tUKD10yeYXcjANMGFcyA==", "student"=>{"first_name"=>"tania", "last_name"=>"aparico"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "tania"], ["last_name", "aparico"], ["created_at", "2018-01-17 05:46:00.019915"], ["updated_at", "2018-01-17 05:46:00.019915"]]
+  [1m[35m (8.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/students.5
+Completed 302 Found in 18ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/students.5" for ::1 at 2018-01-17 00:46:00 -0500
+Processing by StudentsController#index as 
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students.5" for ::1 at 2018-01-17 00:46:31 -0500
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:46:35 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:46:53 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:46:57 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for ::1 at 2018-01-17 00:47:06 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:47:20 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zeq+M+J3FB22fex3edP3H4gRZzVhsx6OZeua0WoKhwLRpWCQ4WNtUYoZxREwt1l5qb40JS4q+UPBFKp1vMF1gg==", "student"=>{"first_name"=>"tama", "last_name"=>"robot"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "tama"], ["last_name", "robot"], ["created_at", "2018-01-17 05:47:20.008783"], ["updated_at", "2018-01-17 05:47:20.008783"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.5ms)
+
+NoMethodError (undefined method `student_path' for #<StudentsController:0x007f92ab92fd98>
+Did you mean?  students_path):
+  app/controllers/students_controller.rb:13:in `create'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.4ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:48:16 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for ::1 at 2018-01-17 00:49:53 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/show" for ::1 at 2018-01-17 00:49:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/students/show"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (90.7ms)
+
+
+Started GET "/students/show" for ::1 at 2018-01-17 00:50:59 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 21ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=show):
+  app/controllers/students_controller.rb:17:in `show'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.5ms)
+
+
+Started GET "/students/1" for ::1 at 2018-01-17 00:51:13 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students" for ::1 at 2018-01-17 00:51:26 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/2" for ::1 at 2018-01-17 00:51:28 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/3" for ::1 at 2018-01-17 00:51:33 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/4" for ::1 at 2018-01-17 00:51:38 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered students/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 00:52:00 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gw2EYh8+Wz265DZxNSWesYvHrFnLwZmQy9m5aoUdzoavQlrBHCoicYaAHxd8QTDXqmj/SYRYfl1vJonOU9Y8Bg==", "student"=>{"first_name"=>"kodi", "last_name"=>"cat"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "kodi"], ["last_name", "cat"], ["created_at", "2018-01-17 05:52:00.862365"], ["updated_at", "2018-01-17 05:52:00.862365"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.5ms)
+
+NoMethodError (undefined method `student_path' for #<StudentsController:0x007f92aa3f8a38>
+Did you mean?  students_path):
+  app/controllers/students_controller.rb:13:in `create'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.8ms)
+
+
+Started GET "/students/2" for ::1 at 2018-01-17 00:58:15 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 21.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 00:58:22 -0500
+
+ActionController::RoutingError (No route matches [GET] "/students/2/edit"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (93.7ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 00:59:23 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f92ab93e0c8>:0x007f92aa279978>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :name %>
+    3:   <%= f.submit "Update"%>
+    4:   <% end  %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4097061218608200697_70133948334560'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.3ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 00:59:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (21.6ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe167fa2e90>:0x007fe1676b5ad0>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :name %>
+    3:   <%= f.submit "Update"%>
+    4:   <% end  %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___2056792123049369381_70303044291980'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.4ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:01:55 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe16758fc00>:0x007fe168316c70>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :name %>
+    3:   <%= f.submit "Update"%>
+    4:   <% end  %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___2056792123049369381_70303044291980'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.1ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:03:27 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe16758fc00>:0x007fe168445100>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :first_name %>
+    3:   <%= f.text_field :last_name %>
+    4:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___2056792123049369381_70303039339320'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.4ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:04:08 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (24.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe167e61fb8>:0x007fe167e58418>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :first_name %>
+    3:   <%= f.text_field :last_name %>
+    4:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___2056792123049369381_70303039339320'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.5ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:04:14 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe167e61fb8>:0x007fe1675d5fc0>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :first_name %>
+    3:   <%= f.text_field :last_name %>
+    4:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___2056792123049369381_70303039339320'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.8ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:12:16 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe16757eb30>:0x007fe167da06d8>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :first_name %>
+    3:   <%= f.text_field :last_name %>
+    4:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___2056792123049369381_70303039339320'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.9ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:12:32 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (23.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe167415ff0>:0x007fe16740c7e8>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :first_name %>
+    3:   <%= f.text_field :last_name %>
+    4:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___2056792123049369381_70303039339320'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.5ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:13:06 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe167415ff0>:0x007fe1673d4e60>
+Did you mean?  students_path):
+    1: <hi>student</hi>
+    2: <%= form_for @student do |f| %>
+    3:   <%= f.text_field :first_name %>
+    4:   <%= f.text_field :last_name %>
+    5:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:2:in `_app_views_students_edit_html_erb___2056792123049369381_70303038217240'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.9ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:13:21 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (21.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe167415ff0>:0x007fe167bba1c0>
+Did you mean?  students_path):
+    1: <h1>stidents</h1>
+    2: <%= form_for @student do |f| %>
+    3:   <%= f.text_field :first_name %>
+    4:   <%= f.text_field :last_name %>
+    5:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:2:in `_app_views_students_edit_html_erb___2056792123049369381_70303042355560'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.0ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:14:27 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007fe167415ff0>:0x007fe1672fbea8>
+Did you mean?  students_path):
+    1: <h1>stidents</h1>
+    2: <% form_for @student do |f| %>
+    3:   <%= f.text_field :first_name %>
+    4:   <%= f.text_field :last_name %>
+    5:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:2:in `_app_views_students_edit_html_erb___2056792123049369381_70303037771760'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.2ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:17:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (23.3ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f8498734a00>:0x007f849872f668>
+Did you mean?  students_path):
+    1: <%= form_for @student do |f| %>
+    2:   <%= f.text_field :first_name %>
+    3:   <%= f.text_field :last_name %>
+    4:   <%= f.submit "update"%>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760912420'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.2ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:19:24 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f8498734a00>:0x007f849b8627f8>
+Did you mean?  students_path):
+    1: <%= form_for @student do |form| %>
+    2:   <%= form.text_field :first_name, placeholder: @student.first_name %><br><br>
+    3:   <%= form.text_field :last_name,  placeholder: @student.last_name%><br>
+    4:     <%= form.submit %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760832220'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.6ms)
+
+
+Started GET "/students/2/edit" for ::1 at 2018-01-17 01:20:36 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered students/edit.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f8499af25b0>:0x007f8499ae92f8>
+Did you mean?  students_path):
+    1: <%= form_for @student do |form| %>
+    2:   <%= form.text_field :first_name, placeholder: @student.first_name %><br><br>
+    3:   <%= form.text_field :last_name,  placeholder: @student.last_name%><br>
+    4:     <%= form.submit %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760832220'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.6ms)
+
+
+Started GET "/students/2" for ::1 at 2018-01-17 01:20:40 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 268ms (Views: 266.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/1" for ::1 at 2018-01-17 01:20:45 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.7ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2018-01-17 01:20:50 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f8499af25b0>:0x007f849b954468>
+Did you mean?  students_path):
+    1: <%= form_for @student do |form| %>
+    2:   <%= form.text_field :first_name, placeholder: @student.first_name %><br><br>
+    3:   <%= form.text_field :last_name,  placeholder: @student.last_name%><br>
+    4:     <%= form.submit %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760832220'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.3ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2018-01-17 01:23:20 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (23.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f8499629628>:0x007f8499633678>
+Did you mean?  students_path):
+    1: <%= form_for @student do |form| %>
+    2:   <%= form.text_field :first_name, placeholder: @student.first_name %><br><br>
+    3:   <%= form.text_field :last_name,  placeholder: @student.last_name%><br>
+    4:     <%= form.submit %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760832220'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.9ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2018-01-17 01:24:20 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f84999e4010>:0x007f8497d92d30>
+Did you mean?  students_path):
+    1: <%= form_for @student do |form| %>
+    2:   <%= form.text_field :first_name, placeholder: @student.first_name %><br><br>
+    3:   <%= form.text_field :last_name,  placeholder: @student.last_name%><br>
+    4:     <%= form.submit %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760832220'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.4ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2018-01-17 01:25:00 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 40ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2018-01-17 01:25:03 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2018-01-17 01:25:35 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (26.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f849c4a3210>:0x007f849c4ab348>
+Did you mean?  students_path):
+    1: <%= form_for @student do |form| %>
+    2:   <%= form.text_field :first_name, placeholder: @student.first_name %><br><br>
+    3:   <%= form.text_field :last_name,  placeholder: @student.last_name%><br>
+    4:     <%= form.submit %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760832220'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.3ms)
+
+
+Started GET "/students/1" for ::1 at 2018-01-17 01:27:30 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/new" for ::1 at 2018-01-17 01:27:31 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 01:27:44 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWueCg9neR4L9cqkMKDNaPYYk7su8DQ/aGo9+MOkVWsxJECpDHMAUjeR48J5xGMO17fAq2Fp0/LMlQ1cFW+n6w==", "student"=>{"first_name"=>"luca", "last_name"=>"meow"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "luca"], ["last_name", "meow"], ["created_at", "2018-01-17 06:27:44.210665"], ["updated_at", "2018-01-17 06:27:44.210665"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to 
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.0ms)
+
+NoMethodError (undefined method `student_url' for #<StudentsController:0x007f8497d5b268>
+Did you mean?  students_url):
+  app/controllers/students_controller.rb:13:in `create'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.9ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 01:28:09 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWueCg9neR4L9cqkMKDNaPYYk7su8DQ/aGo9+MOkVWsxJECpDHMAUjeR48J5xGMO17fAq2Fp0/LMlQ1cFW+n6w==", "student"=>{"first_name"=>"luca", "last_name"=>"meow"}, "commit"=>"Create Student"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "luca"], ["last_name", "meow"], ["created_at", "2018-01-17 06:28:09.215217"], ["updated_at", "2018-01-17 06:28:09.215217"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students.9
+Completed 302 Found in 21ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/students.9" for ::1 at 2018-01-17 01:28:09 -0500
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for ::1 at 2018-01-17 01:28:16 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 01:28:22 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S5SVAghdUhQiKKpVcJuBh18BvC3rHvst1xHW4Te2FPX/20uhC0krWB5MgzM5/y/hfq7vPaSHHOBz7uZF4X3mdQ==", "student"=>{"first_name"=>"kjdf", "last_name"=>"hdsjhd"}, "commit"=>"Create Student"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "kjdf"], ["last_name", "hdsjhd"], ["created_at", "2018-01-17 06:28:22.889177"], ["updated_at", "2018-01-17 06:28:22.889177"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students.10
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/students.10" for ::1 at 2018-01-17 01:28:22 -0500
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students.10/edit" for ::1 at 2018-01-17 01:28:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/students.10/edit"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/tanelam/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.7ms)
+
+
+Started GET "/students/10/edit" for ::1 at 2018-01-17 01:28:59 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered students/edit.html.erb within layouts/application (22.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x007f8499bd89c0>:0x007f8499bc2b48>
+Did you mean?  students_path):
+    1: <%= form_for @student do |form| %>
+    2:   <%= form.text_field :first_name, placeholder: @student.first_name %><br><br>
+    3:   <%= form.text_field :last_name,  placeholder: @student.last_name%><br>
+    4:     <%= form.submit %>
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb___4161884561712660507_70103760832220'
+
+
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tanelam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.2ms)
+
+
+Started GET "/students/10/edit" for ::1 at 2018-01-17 01:30:28 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered students/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/students/10" for ::1 at 2018-01-17 01:30:40 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nxoZNyVxWzYUd90p+qc2+HKRrqCXTWSiFPEh9Z/l+oIrVceUJmUieigT9E+zw5ieUz79sNjUg2+wDhFRSS4IAg==", "student"=>{"first_name"=>"kjdf", "last_name"=>"hdsjhd"}, "commit"=>"Update Student", "id"=>"10"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students.10
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.10" for ::1 at 2018-01-17 01:30:40 -0500
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for ::1 at 2018-01-17 01:31:28 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2018-01-17 01:31:36 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WoGvZ1EUV2D5qIPZuoTwHxbehmwo2vD61h6LGA/9Sk3uznHEUgAuLMXMqr/z4F55N3HVfGdDFzdy4bu82Ta4zQ==", "student"=>{"first_name"=>"oskar", "last_name"=>"garcis"}, "commit"=>"Create Student"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "oskar"], ["last_name", "garcis"], ["created_at", "2018-01-17 06:31:36.545883"], ["updated_at", "2018-01-17 06:31:36.545883"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students.11
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/students.11" for ::1 at 2018-01-17 01:31:36 -0500
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/11/edit" for ::1 at 2018-01-17 01:31:50 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered students/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/students/11" for ::1 at 2018-01-17 01:31:58 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"46ZYjtzzdfMZX17ultFAO1+2tjI3IL1UR1wJRBDlJURX6YYt3+cMvyU7d4jfte5dfhnlIni5Wpnjozngxi7XxA==", "student"=>{"first_name"=>"oskar", "last_name"=>"garcia"}, "commit"=>"Update Student", "id"=>"11"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "students" SET "last_name" = ?, "updated_at" = ? WHERE "students"."id" = ?  [["last_name", "garcia"], ["updated_at", "2018-01-17 06:31:58.293781"], ["id", 11]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students.11
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/students.11" for ::1 at 2018-01-17 01:31:58 -0500
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
