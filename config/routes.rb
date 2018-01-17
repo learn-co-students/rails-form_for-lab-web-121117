@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-    resources :students
-    resources :school_classes
-  get '/students', to: 'students#index'
-  get '/students/new', to: 'students#new'
+     # resources :students
+    # resources :school_classes
+  get '/students', to: 'students#index', as: "students"
+  get '/students/new', to: 'students#new', as: "new_student"
   get '/students/:id', to: 'students#show', as: "student"
-  get '/students/:id/edit', to: 'students#edit'
+  get '/students/:id/edit', to: 'students#edit', as: "edit_student"
   post '/students', to: 'students#create'
   patch '/students/:id', to: 'students#update'
-  # delete '/students/:id', to: 'students#destroy'
-  get '/school_classes/new', to: 'school_classes#new'
-  get '/school_classes/:id', to: 'school_classes#show'
-  get '/school_classes/:id/edit', to: 'school_classes#edit'
-
+  # # delete '/students/:id', to: 'students#destroy'
+  get '/school_classes/new', to: 'school_classes#new', as: "new_school_class"
+  get '/school_classes/:id', to: 'school_classes#show', as: "school_class"
+  get '/school_classes/:id/edit', to: 'school_classes#edit', as: "edit_school_class"
+  post '/school_classes', to: 'school_classes#create'
+  patch '/school_classes/:id', to: 'school_classes#update'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
